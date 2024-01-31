@@ -1,3 +1,14 @@
 # Project-DSB
 
-Travel Planner with Weather API intergration.
+Travel Planner with Weather and Route API.
+
+## Layout of Project
+-------
+
+## APIs used
+-------
+
+## Links to Repo
+------
+
+## Comments
