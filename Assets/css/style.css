@@ -1,0 +1,34 @@
+/* styling */
+body {
+    font-family: 'Heebo', sans-serif;
+    background-color: #ffe9d8;
+    
+}
+a , p {
+    font-family: 'Heebo', sans-serif;
+    color: #151515;
+}
+.navbar  {
+
+    background-color: transparent !important;
+}
+.navbar-link { 
+    color: #151515;
+    align-items: right;
+
+} 
+
+#carouselExampleAutoplaying {
+    max-width: 1000px; 
+    height: 1000px; 
+    margin: auto;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+

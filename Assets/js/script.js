@@ -1,35 +1,65 @@
-
+const API = 'scIi6SIBBGGmzyXYkDfGzG4bOm5tJ9sL'
+const form = $("#form");
+const infoBoard = $('#info');
 var routeMap = tt.map({
-    key: 'scIi6SIBBGGmzyXYkDfGzG4bOm5tJ9sL',
+    key: API,
     container: 'map'
 });
 
-function createMarkerElement(type) {
-    var element = document.createElement('div');
-    var innerElement = document.createElement('div');
-    element.className = 'route-marker';
-    innerElement.className = 'icon tt-icon -white -' + type;
-    element.appendChild(innerElement);
-    return element;
-}
-function addPoint(feature) {
-    var startPoint, endPoint;
-    if (feature.geometry.type === 'MultiLineString') {
-        startPoint = feature.geometry.coordinates[0][0]; //get first point from first line
-        endPoint = feature.geometry.coordinates.slice(-1)[0].slice(-1)[0]; //get last point from last line
-    } else {
-        startPoint = feature.geometry.coordinates[0];
-        endPoint = feature.geometry.coordinates.slice(-1)[0];
-    }
-    new tt.Marker({ element: createMarkerElement('start') }).setLngLat(startPoint).addTo(map);
-    new tt.Marker({ element: createMarkerElement('finish') }).setLngLat(endPoint).addTo(map);
-}
 
-routeMap.once('load', function () {
+
+
+form.on('submit', function (event) {
+    event.preventDefault();
+    var inputs = $(this).serializeArray();
+    inputs = Object.assign({},...inputs);
+    console.log(inputs);
+});
+
+function fetchLocations(originName,destName){
+
+    //Request origin coordinates
+    var originURL = `https://api.tomtom.com/search/2/geocode/${originName}.json?key=${API}&countrySet=US&limit=1`;
+    var f1 = fetch(originURL).then((response)=>{return response.json()})
+    .then( (originData)=>{
+        return originData
+    });
+
+    //Request destination coordinates
+    var destURL = `https://api.tomtom.com/search/2/geocode/${destName}.json?key=${API}&countrySet=US&limit=1`;
+    var f2 = fetch(destURL).then((response)=>{return response.json()})
+    .then( (destData)=>{
+        return destData
+    });
+
+    //Resolve both requests and update HTML
+    Promise.all([f1,f2]).then((values) => {
+        console.log(values);
+        var or = {
+            name:values[0]["results"][0]["address"]["freeformAddress"],
+            lat:values[0]["results"][0]["position"]["lat"],
+            lon:values[0]["results"][0]["position"]["lon"]
+        };
+        var des = {
+            name:values[1]["results"][0]["address"]["freeformAddress"],
+            lat:values[1]["results"][0]["position"]["lat"],
+            lon:values[1]["results"][0]["position"]["lon"]
+        }
+        console.log(or);
+        render_route([or.lat,or.lon],[des.lat,des.lon]);
+    });
+};
+
+fetchLocations("newyork","riga");
+
+
+function render_route(originPos,destPos){
+    var loc = `${originPos[1]},${originPos[0]}:${destPos[1]},${destPos[0]}`;
+    console.log(loc)
     tt.services.calculateRoute({
-        key: 'scIi6SIBBGGmzyXYkDfGzG4bOm5tJ9sL',
+        key: API,
         traffic: false,
-        locations: '14.8786,52.3679:4.8798,52.3679'
+        locations: loc
     }).then(function (response) {
         var geojson = response.toGeoJson();
         routeMap.addLayer({
@@ -38,12 +68,11 @@ routeMap.once('load', function () {
             'source': { 'type': 'geojson', 'data': geojson },
             'paint': { 'line-color': '#4a90e2', 'line-width': 8 }
         }, "3D - Building");
+        var viewPort = new tt.LngLatBounds();
         console.log(geojson)
-        addPoint(geojson.features[0]);
-        var bounds = new tt.LngLatBounds();
         geojson.features[0].geometry.coordinates.forEach(function (point) {
-            bounds.extend(tt.LngLat.convert(point));
+            viewPort.extend(tt.LngLat.convert(point));
         });
-        routeMap.fitBounds(bounds, { duration: 0, padding: 50 });
+        routeMap.fitBounds(viewPort, { duration: 0, padding: 50 });
     });
-});
+}
