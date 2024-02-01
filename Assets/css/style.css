@@ -9,10 +9,13 @@ a , p {
     color: #151515;
 }
 .navbar  {
-    background-color: #ffe9d8;
+    background-color: transparent !important;
     color: #151515;
 }
 .navbar-link { 
     color: #151515;
     align-items: right;
 } 
+.carousel-item img {
+    border-radius: 10px; 
+}
