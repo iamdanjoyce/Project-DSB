@@ -1,0 +1,18 @@
+/* styling */
+body {
+    font-family: 'Heebo', sans-serif;
+    background-color: #ffe9d8;
+    
+}
+a , p {
+    font-family: 'Heebo', sans-serif;
+    color: #151515;
+}
+.navbar  {
+    background-color: #ffe9d8;
+    color: #151515;
+}
+.navbar-link { 
+    color: #151515;
+    align-items: right;
+} 
