@@ -1,13 +1,19 @@
 const API = 'scIi6SIBBGGmzyXYkDfGzG4bOm5tJ9sL'
 const form = $("#form");
-
+const infoBoard = $('#info');
 var routeMap = tt.map({
     key: API,
     container: 'map'
 });
 
-routeMap.on('load', function () {
 
+
+
+form.on('submit', function (event) {
+    event.preventDefault();
+    var inputs = $(this).serializeArray();
+    inputs = Object.assign({},...inputs);
+    console.log(inputs);
 });
 
 function fetchLocations(originName,destName){
@@ -63,6 +69,7 @@ function render_route(originPos,destPos){
             'paint': { 'line-color': '#4a90e2', 'line-width': 8 }
         }, "3D - Building");
         var viewPort = new tt.LngLatBounds();
+        console.log(geojson)
         geojson.features[0].geometry.coordinates.forEach(function (point) {
             viewPort.extend(tt.LngLat.convert(point));
         });
