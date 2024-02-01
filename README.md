@@ -2,6 +2,10 @@
 
 Travel Planner with Weather and Route API.
 
+## Roam USA
+
+Roam USA is the name of the site. The function of the website will allow the end user to plan a route across America. It will also show them points of interest along there route, and also what to expect from the Weather at those points.
+
 ## Layout of Project
 -------
 
@@ -9,7 +13,7 @@ Travel Planner with Weather and Route API.
 -------
 
 ## Links to Repo
-------
+https://github.com/iamdanjoyce/Project-DSB
 
 ## Comments
 images from unsplash
