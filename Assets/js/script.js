@@ -6,9 +6,6 @@ var routeMap = tt.map({
     container: 'map'
 });
 
-
-
-
 form.on('submit', function (event) {
     event.preventDefault();
     var inputs = $(this).serializeArray();
