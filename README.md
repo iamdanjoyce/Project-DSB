@@ -7,10 +7,13 @@ Travel Planner with Weather and Route API.
 Roam USA is the name of the site. The function of the website will allow the end user to plan a route across America. It will also show them points of interest along there route, and also what to expect from the Weather at those points.
 
 ## Layout of Project
--------
+Below is the wireframe created by Raymond of the basic layout of the website and we as a team want the application to look.
+
+![wire-frame](Assets/images/Home_-_wireframe.jpg)
 
 ## APIs used
--------
+Google fonts api with Heebo text
+TomTom maps API
 
 ## Links to Repo
 https://github.com/iamdanjoyce/Project-DSB
