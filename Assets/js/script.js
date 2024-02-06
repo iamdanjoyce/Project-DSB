@@ -2,6 +2,8 @@ const API = 'scIi6SIBBGGmzyXYkDfGzG4bOm5tJ9sL'
 const form = $("#form");
 const infoBoard = $('#info');
 const modalE = $("#errorModal");
+const lengthVal = $("#lengthValue");
+const timeVal = $("#timeValue");
 var routeMap = tt.map({
     key: API,
     container: 'map'
@@ -68,6 +70,11 @@ function render_route(originPos,destPos){
             routeMap.removeSource('route');
         }
         console.log(geojson)
+
+        //lengthVal.text = geojson.features[0]
+
+
+
         routeMap.addLayer({
             'id': 'route',
             'type': 'line',
