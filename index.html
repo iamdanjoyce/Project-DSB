@@ -12,118 +12,103 @@
 </head>
 
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Roam USA</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto"> 
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./journey.html">Journey Planner</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
-            </ul>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Roam USA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./journey.html">Journey Planner</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
-      <!-- Carousel -->
+    </nav>
+    <!-- Carousel -->
     <header>
-      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="./Assets/images/grand-canyon.jpg" class="d-block w-100" alt="grand-canyon">
-                <div class="carousel-caption d-none d-md-block text-center">
-                    <h5>Grand Canyon</h5>
-                    <p>Explore the beauty of the Grand Canyon</p>
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./Assets/images/grand-canyon.jpg" class="d-block w-100" alt="grand-canyon">
+                    <div class="carousel-caption d-none d-md-block text-center">
+                        <h5>Grand Canyon</h5>
+                        <p>Explore the beauty of the Grand Canyon</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./Assets/images/hollywood.jpg" class="d-block w-100" alt="hollywood">
+                    <div class="carousel-caption d-none d-md-block text-center">
+                        <h5>Hollywood</h5>
+                        <p>Experience the glamour of Hollywood</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./Assets/images/new-york.jpg" class="d-block w-100" alt="new-york">
+                    <div class="carousel-caption d-none d-md-block text-center">
+                        <h5>New York</h5>
+                        <p>Discover the iconic sights of New York</p>
+                    </div>
                 </div>
             </div>
-            <div class="carousel-item">
-                <img src="./Assets/images/hollywood.jpg" class="d-block w-100" alt="hollywood">
-                <div class="carousel-caption d-none d-md-block text-center">
-                    <h5>Hollywood</h5>
-                    <p>Experience the glamour of Hollywood</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="./Assets/images/new-york.jpg" class="d-block w-100" alt="new-york">
-                <div class="carousel-caption d-none d-md-block text-center">
-                    <h5>New York</h5>
-                    <p>Discover the iconic sights of New York</p>
-                </div>
-            </div>
-          </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </header> 
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </header>
     <!-- form -->
     <form id="form" action="submit_handler.php" method="post">
-      <label for="originField">Origin:</label>
-      <input type="text" id="originField" name="originField" required>
+        <label for="originField">Origin:</label>
+        <input type="text" id="originField" name="originField" required>
 
-      <label for="destField">Destination:</label>
-      <input type="text" id="destField" name="destField" required>
+        <label for="destField">Destination:</label>
+        <input type="text" id="destField" name="destField" required>
 
-      <button type="submit">Submit</button>
-  </form>
-  <!-- Info Div -->
-  <div id="info">
-    <!-- Heading with id="route" -->
-    <h2 id="route">Route Information</h2>
-    
-    <!-- Text with id="routeLength" -->
-    <p id="routeLength">Route Length: <span id="lengthValue">---</span></p>
-    
-    <!-- Text with id="routeTime" -->
-    <p id="routeTime">Route Time: <span id="timeValue">---</span></p>
-</div>
+        <button type="submit">Submit</button>
+    </form>
+    <!-- Info Div -->
+    <div id="info">
+        <!-- Heading with id="route" -->
+        <h2 id="route">Route Information</h2>
 
-      <!-- Card -->
-<section class="container">
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col">
-          <div class="card" style="width: 18rem;">
-              <img src="./Assets/images/grand-canyon.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-          </div>
-      </div>
-      <div class="col">
-          <div class="card" style="width: 18rem;">
-              <img src="./Assets/images/hollywood.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-          </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 18rem;">
-            <img src="./Assets/images/new-york.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
+        <!-- Text with id="routeLength" -->
+        <p id="routeLength">Route Length: <span id="lengthValue">---</span></p>
+
+        <!-- Text with id="routeTime" -->
+        <p id="routeTime">Route Time: <span id="timeValue">---</span></p>
     </div>
-  </div>
-</section>
-<footer>
-  <p>&copy; 2024 Roam USA. All rights reserved.</p>
-</footer>
+
+    <!-- Card -->
+    <section class="container">
+        <div class="grid1"></div>
+        <div class="grid2"></div>
+        <div class="grid3"></div>
+        <div class="grid4"></div>
+        <div class="grid5"></div>
+    </section>
+
+    
+    
+    <footer>
+        <p>&copy; 2024 Roam USA. All rights reserved.</p>
+    </footer>
     <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.25.1/maps/maps-web.min.js"></script>
     <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.25.1/services/services-web.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
