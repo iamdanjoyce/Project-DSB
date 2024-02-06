@@ -27,9 +27,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="./journey.html">Journey Planner</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
             </ul>
         </div>
     </div>
@@ -70,60 +67,70 @@
         </button>
       </div>
     </header> 
+
     <!-- form -->
-    <form id="form" action="submit_handler.php" method="post">
-      <label for="originField">Origin:</label>
-      <input type="text" id="originField" name="originField" required>
-
-      <label for="destField">Destination:</label>
-      <input type="text" id="destField" name="destField" required>
-
-      <button type="submit">Submit</button>
-  </form>
-  <!-- Info Div -->
-  <div id="info">
-    <!-- Heading with id="route" -->
-    <h2 id="route">Route Information</h2>
-    
-    <!-- Text with id="routeLength" -->
-    <p id="routeLength">Route Length: <span id="lengthValue">---</span></p>
-    
-    <!-- Text with id="routeTime" -->
-    <p id="routeTime">Route Time: <span id="timeValue">---</span></p>
-</div>
-
-      <!-- Card -->
-<section class="container">
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col">
-          <div class="card" style="width: 18rem;">
-              <img src="./Assets/images/grand-canyon.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
+    <div class="bento-box">
+        <form id="form" action="submit_handler.php" method="post" class="form-container">
+          <div class="form-group">
+            <label for="originField">Origin:</label>
+            <input type="text" class="form-control" id="originField" name="originField" required>
           </div>
-      </div>
-      <div class="col">
-          <div class="card" style="width: 18rem;">
-              <img src="./Assets/images/hollywood.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
+        
+          <div class="form-group">
+            <label for="destField">Destination:</label>
+            <input type="text" class="form-control" id="destField" name="destField" required>
           </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 18rem;">
-            <img src="./Assets/images/new-york.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        
+          <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+    </div>
+
+    <!-- Info Div -->
+    <div id="info">
+        <!-- Heading with id="route" -->
+        <h2 id="route">Route Information</h2>
+        
+        <!-- Text with id="routeLength" -->
+        <p id="routeLength">Route Length: <span id="lengthValue">---</span></p>
+        
+        <!-- Text with id="routeTime" -->
+        <p id="routeTime">Route Time: <span id="timeValue">---</span></p>
+    </div>
+
+    <!-- Card -->
+    <section class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card">
+                    <img src="./Assets/images/grand-canyon.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./Assets/images/hollywood.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./Assets/images/new-york.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-  </div>
-</section>
-<footer>
-  <p>&copy; 2024 Roam USA. All rights reserved.</p>
-</footer>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Roam USA. All rights reserved.</p>
+    </footer>
+    
     <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.25.1/maps/maps-web.min.js"></script>
     <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.25.1/services/services-web.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
