@@ -39,7 +39,7 @@ input[type="text"] {
 
 /* Card styles */
 a,
-p {
+p, h3 {
     font-family: 'Heebo', sans-serif;
     color: #151515;
 }
