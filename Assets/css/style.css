@@ -32,9 +32,36 @@ input[type="text"] {
 
 /* Card styles */
 a,
-p {
+p, h3 {
     font-family: 'Heebo', sans-serif;
     color: white;
+}
+
+header .slide1 {
+    font-family: 'Heebo', sans-serif;
+    color: #ffffff;
+    font-size: 80px;
+    font-weight: bold;
+    text-align: left;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+header .slide2 {
+    font-family: 'Heebo', sans-serif;
+    color: #ffffff;
+    font-size: 80px;
+    font-weight: bold;
+    text-align: left;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+header .slide3 {
+    font-family: 'Heebo', sans-serif;
+    color: #ffffff;
+    font-size: 80px;
+    font-weight: bold;
+    text-align: left;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .navbar-link {
@@ -51,19 +78,22 @@ p {
 
 
 header {
-    height: 700px;
+    height: 510px;
+    border-radius: 16px;
 }
 
 header .carousel {
     display: grid;
     max-width: 1280px;
     margin: auto;
+    border-radius: 16px;
 }
 
 #carouselExampleAutoplaying {
-    max-width: 1000px;
-    height: 1000px;
+    max-width: 1280px;
+    height: 510px;
     margin: auto;
+    border-radius: 16px;
 }
 
 .carousel-item img {

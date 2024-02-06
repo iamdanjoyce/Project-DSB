@@ -32,23 +32,23 @@
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./Assets/images/grand-canyon.jpg" class="d-block w-100" alt="grand-canyon">
+                    <img src="/Assets/images/Header image -Maroon Bells.jpg" class="d-block w-100" alt="grand-canyon">
                     <div class="carousel-caption d-none d-md-block text-center">
-                        <h5>Grand Canyon</h5>
+                        <h1 class="slide1">Explore <br> The land <br>Around You</h1>
                         <p>Explore the beauty of the Grand Canyon</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="./Assets/images/hollywood.jpg" class="d-block w-100" alt="hollywood">
+                    <img src="./Assets/images/Header image -New york.jpg" class="d-block w-100" alt="hollywood">
                     <div class="carousel-caption d-none d-md-block text-center">
-                        <h5>Hollywood</h5>
-                        <p>Experience the glamour of Hollywood</p>
+                        <h1 class="slide2">Explore <br> The land <br>Around You</h1>
+                        
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="./Assets/images/new-york.jpg" class="d-block w-100" alt="new-york">
+                    <img src="/Assets/images/Header images - Colorado Skiing.jpg" class="d-block w-100" alt="new-york">
                     <div class="carousel-caption d-none d-md-block text-center">
-                        <h5>New York</h5>
+                        <h1 class="slide3">Explore <br> The land <br>Around You</h1>
                         <p>Discover the iconic sights of New York</p>
                     </div>
                 </div>
@@ -65,54 +65,55 @@
             </button>
         </div>
     </header>
+<!-- site description -->
+<div class="card text-center bg-transparent border-0">
+  <div class="card-header border-0">
+  </div>
+  <div class="card-body border-0">
+    <!-- <h3 class="card-title"></h3> -->
+    <h3 class="card-text border-0">From California, to the New York Island. From the Redwood Forest, to the Gulf stream waters <br>
+      From Yellowstone park to the Las Vegas roulette table. From Disneyland to the forests of Oregon.<br>
+      Set your imagination free. Plan your own American dream journey<br>
+    Roam USA and wherever you are from have a nice day now...</h3>
+  </div>
+</div>
     <!-- form -->
     <div class="container d-flex justify-content-center">
-        <div class="card bg-transparent border-0" style="width: 25rem;">
-            <form id="form" class="card-body d-flex flex-column">
-                <div class="form-group">
-                    <label for="originField">Origin:</label>
-                    <input type="text" class="form-control" id="originField" name="originField" required>
-                </div>
-                <div class="form-group">
-                    <label for="destField">Destination:</label>
-                    <input type="text" class="form-control" id="destField" name="destField" required>
-                </div>
-                <button type="submit" class="btn btn-primary align-self-center">Submit</button>
-            </form>
+        <div class="card" style="width: 25rem;">
+          <form id="form" class="card-body">
+            <div class="form-group">
+              <label for="originField">Origin:</label>
+              <input type="text" class="form-control" id="originField" name="originField" required>
+            </div>
+            <div class="form-group">
+              <label for="destField">Destination:</label>
+              <input type="text" class="form-control" id="destField" name="destField" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
         </div>
-    </div>
-
-    
-   <!-- Info Div -->
-<div class="container">
-    <div id="info" class="weather-forecast">
+    <!-- Info Div -->
+    <div id="info">
         <!-- Heading with id="route" -->
         <h2 id="route">Route Information</h2>
         <!-- Text with id="routeLength" -->
-        <div class="row">
-            <div class="col">
-                <p id="routeLength">Route Length: <span id="lengthValue">---</span></p>
-            </div>
-            <div class="col">
-                <!-- Text with id="routeTime" -->
-                <p id="routeTime">Route Time: <span id="timeValue">---</span></p>
-            </div>
-        </div>
+        <p id="routeLength">Route Length: <span id="lengthValue">---</span></p>
+        <!-- Text with id="routeTime" -->
+        <p id="routeTime">Route Time: <span id="timeValue">---</span></p>
+        <div id="map"></div>
     </div>
-</div>
-<!-- Weather -->
+    <!-- Weather -->
     <div class="container">
-        <div class="weather-forecast">
-            <h2>5-Day Weather Forecast</h2>
-            <div class="row">
-                <div class="col">
-                    <div class="weather-box">
-                        <h3>Day 1</h3>
-                        <p>Temperature: XX°C</p>
-                        <p>Weather: Sunny</p>
-                    </div>
-                </div>
-      </div>          
+      <div class="weather-forecast">
+          <h2>5-Day Weather Forecast</h2>
+          <div class="row">
+              <div class="col">
+                  <div class="weather-box">
+                      <h3>Day 1</h3>
+                      <p>Temperature: XX°C</p>
+                      <p>Weather: Sunny</p>
+                  </div>
+              </div>
     <!-- Card -->
     <section class="container">
         <div class="grid1"></div>
@@ -130,3 +131,12 @@
     <script src="./Assets/js/script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
