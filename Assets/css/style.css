@@ -1,11 +1,43 @@
-/* styling */
+/* Reset and global styles */
 body {
     font-family: 'Heebo', sans-serif;
-    background-color: #ffe9d8;
-    justify-content: center;
-    align-items: center;
+    background: linear-gradient(300deg, #ffe9d8 0%, #ffffff 100%);
+    color: #151515;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+a, p {
+    color: inherit;
+}
+
+/* Bento box styles */
+.bento-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.form-group {
+    display: grid;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+/* Card styles */
 a,
 p {
     font-family: 'Heebo', sans-serif;
@@ -18,18 +50,13 @@ p {
 
 }
 
+
 #card {
     height: 480px;
     margin: auto;
     border-radius: 10px;
 }
 
-#form {
-    width: 300px;
-    /* Set the width of the form as needed */
-    margin: auto;
-    margin-bottom: 50px;
-}
 
 header {
     height: 700px;
@@ -54,6 +81,7 @@ header .carousel {
     border-radius: 10px;
 }
 
+/* Weather box styles */
 .weather-box {
     border: 1px solid #ccc;
     padding: 15px;
@@ -65,10 +93,9 @@ header .carousel {
 
 footer {
     background-color: #f8f9fa;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
 }
-
 .container {
     display: grid;
     margin: 16px auto;
@@ -79,7 +106,6 @@ footer {
 }
 
 .container div{
-    
     border-radius: 10px;
 }
 
