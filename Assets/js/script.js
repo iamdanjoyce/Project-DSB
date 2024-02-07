@@ -1,9 +1,12 @@
 const API = 'scIi6SIBBGGmzyXYkDfGzG4bOm5tJ9sL'
+const APIweather = "9ec750d6e4b0dbc2bd30476d48802f5c";
 const form = $("#form");
 const infoBoard = $('#info');
 const modalE = $("#errorModal");
 const lengthVal = $("#lengthValue");
 const timeVal = $("#timeValue");
+const weatherDiv = $("#weatherInfo");
+const weatherTemplate = $("#wTemplate");
 var routeMap = tt.map({
     key: API,
     container: 'map'
@@ -16,7 +19,7 @@ form.on('submit', function (event) {
     fetchLocations(inputs[0].value,inputs[1].value);
 
 });
-
+//
 function fetchLocations(originName,destName){
     //Request origin coordinates
     var originURL = `https://api.tomtom.com/search/2/geocode/${originName}.json?key=${API}&countrySet=US&limit=1`;
@@ -93,4 +96,22 @@ function showModal(text){
     let modal = new bootstrap.Modal(modalE);
     modalE.find(".modal-body").text(text);
     modal.show();
+}
+
+
+function renderWeather(lat,lon){
+    var weatherURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lat}&appid=${APIweather}&cnt=60` 
+    fetch(weatherURL)
+    .then( (response)=> {return response.json()} )
+    then( (weatherData)=> {
+        weatherDiv.empty(); //Clear all children in weather
+        for (let i = 0; i < 5; i++) {
+            let day = weatherData.list[39-(8*i)];
+            let dayCard = weatherTemplate.clone(); //Clone card as a template
+            dayCard.removeClass("d-none");
+            dayCard.find(".card-header").text(currentDay.dt_txt.split(" ")[0]);
+            dayCard.find(".card-body").attr("src",`https://openweathermap.org/img/wn/${currentDay.weather[0].icon}@4x.png`);
+            
+        }
+    })
 }
