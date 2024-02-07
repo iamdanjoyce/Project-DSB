@@ -151,7 +151,7 @@ footer p {
 .grid1 {
     grid-column: 1/4;
     grid-row: 1/5;
-    background: url(/Assets/images/Vegas.jpg) center center;
+    background: url(/Assets/images/Vegas-1.jpg) center center;
     background-size: cover;
 }
 
@@ -166,14 +166,14 @@ footer p {
 .grid3 {
     grid-column: 7/13;
     grid-row: 1/5;
-    background: url(/Assets/images/Grnd-canyon.jpg) center center;
+    background: url(/Assets/images/Grnd-canyon-1.jpg) center center;
     background-size: cover;
 }
 
 .grid4 {
     grid-column: 1/7;
     grid-row: 5/8;
-    background: url(/Assets/images/Miami.jpg) center center;
+    background: url(/Assets/images/Miami-1.jpg) center center;
     background-size: cover;
 }
 
