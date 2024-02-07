@@ -7,7 +7,6 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
-
 a,
 p {
     color: inherit;
@@ -115,11 +114,18 @@ header .carousel {
     text-align: center;
     display: inline-block;
 }
+.weather-box p{
+    color: #151515;
+} 
 
 footer {
     background-color: #f8f9fa;
     padding: 10px 0;
     text-align: center;
+}
+
+footer p {
+    color: #151515;
 }
 
 .container {
@@ -239,3 +245,4 @@ footer {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value (alpha) to control darkness */
     z-index: 0;
+}
