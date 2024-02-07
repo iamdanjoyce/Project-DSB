@@ -150,14 +150,14 @@ footer {
 .grid2 {
     grid-column: 4/7;
     grid-row: 1/5;
-    background: url(/Assets/images/Universal\ Studios.jpg) center center;
+    background: url(/Assets/images/Universal-Studios.jpg) center center;
     background-size: cover;
 }
 
 .grid3 {
     grid-column: 7/13;
     grid-row: 1/5;
-    background: url(/Assets/images/Grnd\ canyon.jpg) center center;
+    background: url(/Assets/images/Grnd-canyon.jpg) center center;
     background-size: cover;
 }
 
@@ -171,7 +171,7 @@ footer {
 .grid5 {
     grid-column: 7/13;
     grid-row: 5/8;
-    background: url(/Assets/images/Mt\ rushmore.jpg) center center;
+    background: url(/Assets/images/Mt-rushmore.jpg) center center;
     background-size: cover;
 }
 
@@ -239,4 +239,3 @@ footer {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value (alpha) to control darkness */
     z-index: 0;
-}

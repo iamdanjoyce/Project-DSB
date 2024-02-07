@@ -34,21 +34,21 @@
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="/Assets/images/Header image -Maroon Bells.jpg" class="d-block w-100" alt="grand-canyon">
+                    <img src="./Assets/images/Header-image-Maroon-Bells.jpg" class="d-block w-100" alt="grand-canyon">
                     <div class="carousel-caption d-none d-md-block text-center">
                         <h1 class="slide1">Explore <br> The land <br>Around You</h1>
                         <p>Explore the beauty of the Grand Canyon</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="./Assets/images/Header image -New york.jpg" class="d-block w-100" alt="hollywood">
+                    <img src="./Assets/images/Header-image-New-york.jpg" class="d-block w-100" alt="hollywood">
                     <div class="carousel-caption d-none d-md-block text-center">
                         <h1 class="slide2">Explore <br> The land <br>Around You</h1>
 
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="/Assets/images/Header images - Colorado Skiing.jpg" class="d-block w-100" alt="new-york">
+                    <img src="./Assets/images/Header-images-Colorado-Skiing.jpg" class="d-block w-100" alt="new-york">
                     <div class="carousel-caption d-none d-md-block text-center">
                         <h1 class="slide3">Explore <br> The land <br>Around You</h1>
                         <p>Discover the iconic sights of New York</p>
@@ -67,19 +67,16 @@
             </button>
         </div>
     </header>
-    <!-- site description -->
-    <div class="card text-center bg-transparent border-0">
-        <div class="card-header border-0">
-        </div>
-        <div class="card-body border-0">
-            <!-- <h3 class="card-title"></h3> -->
-            <h3 class="card-text border-0">From California, to the New York Island. From the Redwood Forest, to the Gulf
-                stream waters <br>
-                From Yellowstone park to the Las Vegas roulette table. From Disneyland to the forests of Oregon.<br>
-                Set your imagination free. Plan your own American dream journey<br>
-                Roam USA and wherever you are from have a nice day now...</h3>
-        </div>
-    </div>
+<!-- site description -->
+<div class="card text-center bg-transparent border-0">
+  <div class="card-body border-0">
+    <!-- <h3 class="card-title"></h3> -->
+    <h3 class="card-text border-0">From California, to the New York Island. From the Redwood Forest, to the Gulf stream waters <br>
+      From Yellowstone park to the Las Vegas roulette table. From Disneyland to the forests of Oregon.<br>
+      Set your imagination free. Plan your own American dream journey<br>
+    Roam USA and wherever you are from have a nice day now...</h3>
+  </div>
+</div>
     <!-- form -->
     <div class="container d-flex justify-content-center">
         <div class="card bg-transparent border-0" style="width: 25rem;">
@@ -95,7 +92,6 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
-    </div>
     <!-- Info Div -->
     <div class="container">
         <div id="info" class="weather-forecast">
@@ -112,23 +108,44 @@
                 </div>
             </div>
         </div>
-    </div>
+      </div>
     <!-- Weather -->
-    <div class="container">
-        <div class="weather-forecast">
-            <h2>5-Day Weather Forecast</h2>
-            <div class="row">
-                <div class="col">
-                    <div class="weather-box">
-                        <h3>Day 1</h3>
-                        <p>Temperature: XX°C</p>
-                        <p>Weather: Sunny</p>
-                    </div>
-                </div>
+    <div class="container" id="weatherInfo">
+      <div class="weather-forecast">
+          <h2>5-Day Weather Forecast</h2>
+          <div class="row">
+              <div class="col">
+                  <div class="weather-box">
+                      <h3>Day 1</h3>
+                      <p>Temperature: XX°C</p>
+                      <p>Weather: Sunny</p>
+                  </div>
+              </div>
+             </div>
+    <!--map -->
+    <div id="map"></div>
+    <!-- modal -->
+    <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <!-- Modal title changed to Notification -->
+              <h5 class="modal-title" id="exampleModalLabel">Notification</h5>
+              <!-- Close button -->
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+              <!-- Text can be inserted here -->
+            </div>
+            <!-- No footer section -->
+          </div>
         </div>
+      </div>
     </div>
-    <!-- Card -->
+              <!-- Card -->
     <section class="container">
         <div class="grid1">
                 <h3>State-to-State Discovery</h3>
@@ -154,6 +171,7 @@
                 <p>Plan your perfect trip to some<br>the USA’s top-rated<br>destinations</p>
         </div>
     </section>
+
     <footer>
         <p>&copy; 2024 Roam USA. All rights reserved.</p>
     </footer>
