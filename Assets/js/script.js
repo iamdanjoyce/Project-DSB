@@ -100,7 +100,7 @@ function showModal(text){
 
 
 function renderWeather(lat,lon){
-    var weatherURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lat}&appid=${APIweather}&cnt=60` 
+    var weatherURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${APIweather}&cnt=60` 
     fetch(weatherURL)
     .then( (response)=> {return response.json()} )
     then( (weatherData)=> {
@@ -109,9 +109,12 @@ function renderWeather(lat,lon){
             let day = weatherData.list[39-(8*i)];
             let dayCard = weatherTemplate.clone(); //Clone card as a template
             dayCard.removeClass("d-none");
-            dayCard.find(".card-header").text(currentDay.dt_txt.split(" ")[0]);
-            dayCard.find(".card-body").attr("src",`https://openweathermap.org/img/wn/${currentDay.weather[0].icon}@4x.png`);
+            dayCard.find(".weather-box").children().eq(0).text(`Day ${i+1}`);
+            dayCard.find(".weather-box").children().eq(1).text("Temp: " + (Math.round(day["main"]["temp"]-273.15)*100)/100 + "°C");
+            dayCard.find(".weather-box").children().eq(2).attr("src",`https://openweathermap.org/img/wn/${currentDay.weather[0].icon}@4x.png`);
             
+            weatherDiv.prepend(dayCard);
+
         }
     })
 }
