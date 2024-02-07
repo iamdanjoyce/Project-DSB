@@ -7,6 +7,7 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+
 a,
 p {
     color: inherit;
@@ -114,9 +115,6 @@ header .carousel {
     text-align: center;
     display: inline-block;
 }
-.weather-box p{
-    color: #151515;
-} 
 
 footer {
     background-color: #f8f9fa;
@@ -156,7 +154,7 @@ footer p {
 .grid2 {
     grid-column: 4/7;
     grid-row: 1/5;
-    background: url(/Assets/images/Universal-Studios.jpg) center center;
+    background: url(/Assets/images/Universal\ Studios.jpg) center center;
     background-size: cover;
 }
 
@@ -200,6 +198,13 @@ footer p {
 
 /* Style for paragraph */
 .grid3 p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 56px;
+    padding-left: 56px;
+}
+
+.grid1 .grid p {
     font-size: 20px;
     line-height: 1.5;
     margin-bottom: 56px;
