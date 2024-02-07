@@ -89,33 +89,33 @@
                     <label for="destField">Destination:</label>
                     <input type="text" class="form-control" id="destField" name="destField" required>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary w-100 mt-2">Submit</button>
             </form>
         </div>
     </div>
     <!-- Info Div -->
     <div class="container">
-        <div id="info" class="weather-forecast">
+        <div id="info" class="weather-forecast row">
             <!-- Heading with id="route" -->
-            <h2 id="route">Route Information</h2>
+            <h2 id="route" class="col-6 text-center">Route Information</h2>
             <!-- Text with id="routeLength" -->
-            <div class="row">
-                <div class="col">
-                    <p id="routeLength">Route Length: <span id="lengthValue">---</span></p>
+            <div class="row col-6 text-start">
+                <div class="text-dark">
+                    <p id="routeLength" class="text-dark">Route Length: <span id="lengthValue">---</span></p>
                 </div>
-                <div class="col">
+                <div class="">
                     <!-- Text with id="routeTime" -->
-                    <p id="routeTime">Route Time: <span id="timeValue">---</span></p>
+                    <p id="routeTime" class="text-dark">Route Time: <span id="timeValue">---</span></p>
                 </div>
             </div>
         </div>
       </div>
     <!-- Weather -->
-    <div class="container" id="weatherInfo">
+    <div class="container">
         <div class="weather-forecast">
-            <h2>5-Day Weather Forecast</h2>
+            <h2 class="text-center">5-Day Weather Forecast</h2>
             <div class="row">
-                <div class="col" id="weatherInfo">
+                <div class="d-flex justify-content-around" id="weatherInfo">
                     <!-- Place for 5 cards created in JS -->
                 </div>
               </div>
