@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -23,12 +25,6 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./journey.html">Journey Planner</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -38,23 +34,23 @@
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./Assets/images/grand-canyon.jpg" class="d-block w-100" alt="grand-canyon">
+                    <img src="./Assets/images/Header-image-Maroon-Bells.jpg" class="d-block w-100" alt="grand-canyon">
                     <div class="carousel-caption d-none d-md-block text-center">
-                        <h5>Grand Canyon</h5>
+                        <h1 class="slide1">Explore <br> The land <br>Around You</h1>
                         <p>Explore the beauty of the Grand Canyon</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="./Assets/images/hollywood.jpg" class="d-block w-100" alt="hollywood">
+                    <img src="./Assets/images/Header-image-New-york.jpg" class="d-block w-100" alt="hollywood">
                     <div class="carousel-caption d-none d-md-block text-center">
-                        <h5>Hollywood</h5>
-                        <p>Experience the glamour of Hollywood</p>
+                        <h1 class="slide2">Explore <br> The land <br>Around You</h1>
+
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="./Assets/images/new-york.jpg" class="d-block w-100" alt="new-york">
+                    <img src="./Assets/images/Header-images-Colorado-Skiing.jpg" class="d-block w-100" alt="new-york">
                     <div class="carousel-caption d-none d-md-block text-center">
-                        <h5>New York</h5>
+                        <h1 class="slide3">Explore <br> The land <br>Around You</h1>
                         <p>Discover the iconic sights of New York</p>
                     </div>
                 </div>
@@ -73,8 +69,6 @@
     </header>
 <!-- site description -->
 <div class="card text-center bg-transparent border-0">
-  <div class="card-header border-0">
-  </div>
   <div class="card-body border-0">
     <!-- <h3 class="card-title"></h3> -->
     <h3 class="card-text border-0">From California, to the New York Island. From the Redwood Forest, to the Gulf stream waters... <br>
@@ -85,31 +79,38 @@
 </div>
     <!-- form -->
     <div class="container d-flex justify-content-center">
-      <div class="card" style="width: 25rem;">
-        <form id="form" class="card-body">
-          <div class="form-group">
-            <label for="originField">Origin:</label>
-            <input type="text" class="form-control" id="originField" name="originField" required>
-          </div>
-          <div class="form-group">
-            <label for="destField">Destination:</label>
-            <input type="text" class="form-control" id="destField" name="destField" required>
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-      </div>
-    </div>
+        <div class="card bg-transparent border-0" style="width: 25rem;">
+            <form id="form" class="card-body">
+                <div class="form-group">
+                    <label for="originField">Origin:</label>
+                    <input type="text" class="form-control" id="originField" name="originField" required>
+                </div>
+                <div class="form-group">
+                    <label for="destField">Destination:</label>
+                    <input type="text" class="form-control" id="destField" name="destField" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
     <!-- Info Div -->
-    <div id="info">
-        <!-- Heading with id="route" -->
-        <h2 id="route">Route Information</h2>
-        <!-- Text with id="routeLength" -->
-        <p id="routeLength">Route Length: <span id="lengthValue">---</span></p>
-        <!-- Text with id="routeTime" -->
-        <p id="routeTime">Route Time: <span id="timeValue">---</span></p>
-    </div>
-    <!-- Weather -->
     <div class="container">
+        <div id="info" class="weather-forecast">
+            <!-- Heading with id="route" -->
+            <h2 id="route">Route Information</h2>
+            <!-- Text with id="routeLength" -->
+            <div class="row">
+                <div class="col">
+                    <p id="routeLength">Route Length: <span id="lengthValue">---</span></p>
+                </div>
+                <div class="col">
+                    <!-- Text with id="routeTime" -->
+                    <p id="routeTime">Route Time: <span id="timeValue">---</span></p>
+                </div>
+            </div>
+        </div>
+      </div>
+    <!-- Weather -->
+    <div class="container" id="weatherInfo">
       <div class="weather-forecast">
           <h2>5-Day Weather Forecast</h2>
           <div class="row">
@@ -120,14 +121,57 @@
                       <p>Weather: Sunny</p>
                   </div>
               </div>
-    <!-- Card -->
+             </div>
+    <!--map -->
+    <div id="map"></div>
+    <!-- modal -->
+    <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <!-- Modal title changed to Notification -->
+              <h5 class="modal-title" id="exampleModalLabel">Notification</h5>
+              <!-- Close button -->
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+              <!-- Text can be inserted here -->
+            </div>
+            <!-- No footer section -->
+          </div>
+        </div>
+      </div>
+    </div>
+              <!-- Card -->
     <section class="container">
-        <div class="grid1"></div>
-        <div class="grid2"></div>
-        <div class="grid3"></div>
-        <div class="grid4"></div>
-        <div class="grid5"></div>
+        <div class="grid1">
+                <h3>State-to-State Discovery</h3>
+                <p>Immerse yourself in the richness of<br>culture and excitement across the USA.</p>
+        </div>
+        <div class="grid2">
+                <h3>Passion for Exploration</h3>
+                <p>Ignite your passion for travel and<br>exploration with our USA-focused<br>experiences</p>
+        </div>
+        <div class="grid3">
+            <div class="text-container">
+                <h3>Popular Destinations</h3>
+                <p>Plan your perfect trip to some<br>the USA’s top-rated<br>destinations</p>
+                <a href="#" class="button">Explore destinations</a>
+            </div>
+        </div>
+        <div class="grid4">
+                <h3>Popular Destinations</h3>
+                <p>Plan your perfect trip to some<br>the USA’s top-rated<br>destinations</p>
+        </div>
+        <div class="grid5">
+                <h3>Popular Destinations</h3>
+                <p>Plan your perfect trip to some<br>the USA’s top-rated<br>destinations</p>
+        </div>
     </section>
+
     <footer>
         <p>&copy; 2024 Roam USA. All rights reserved.</p>
     </footer>
@@ -136,13 +180,5 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="./Assets/js/script.js"></script>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
