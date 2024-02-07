@@ -115,6 +115,10 @@ header .carousel {
     text-align: center;
     display: inline-block;
 }
+.weather-box p {
+    color: #151515;
+    margin: 0;
+}
 
 footer {
     background-color: #f8f9fa;
