@@ -16,7 +16,7 @@ form.on('submit', function (event) {
     fetchLocations(inputs[0].value,inputs[1].value);
 
 });
-
+//
 function fetchLocations(originName,destName){
     //Request origin coordinates
     var originURL = `https://api.tomtom.com/search/2/geocode/${originName}.json?key=${API}&countrySet=US&limit=1`;
