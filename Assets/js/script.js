@@ -6,7 +6,7 @@ const modalE = $("#errorModal");
 const lengthVal = $("#lengthValue");
 const timeVal = $("#timeValue");
 const weatherDiv = $("#weatherInfo");
-const weatherTemplate = $("#wTemplate");
+const weatherTemplate = $("#weatherTemplate");
 var routeMap = tt.map({
     key: API,
     container: 'map'
@@ -55,6 +55,7 @@ function fetchLocations(originName,destName){
             lon:values[1]["results"][0]["position"]["lon"]
         }
         render_route([or.lat,or.lon],[des.lat,des.lon]);
+        renderWeather(des.lat,des.lon);
     }).catch((e)=>{
         showModal(e);
     });
@@ -74,9 +75,8 @@ function render_route(originPos,destPos){
         }
         console.log(geojson)
 
-        //lengthVal.text = geojson.features[0]
-
-
+        lengthVal.text(round2(geojson.features[0].properties.summary.lengthInMeters/1000) + " Km");
+        timeVal.text(round2(geojson.features[0].properties.summary.travelTimeInSeconds/3600) + " Hours");
 
         routeMap.addLayer({
             'id': 'route',
@@ -100,18 +100,25 @@ function showModal(text){
 
 
 function renderWeather(lat,lon){
-    var weatherURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lat}&appid=${APIweather}&cnt=60` 
+    var weatherURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${APIweather}&cnt=60` 
     fetch(weatherURL)
     .then( (response)=> {return response.json()} )
-    then( (weatherData)=> {
+    .then( (weatherData)=> {
         weatherDiv.empty(); //Clear all children in weather
         for (let i = 0; i < 5; i++) {
-            let day = weatherData.list[39-(8*i)];
+            let dayData = weatherData.list[39-(8*i)];
             let dayCard = weatherTemplate.clone(); //Clone card as a template
             dayCard.removeClass("d-none");
-            dayCard.find(".card-header").text(currentDay.dt_txt.split(" ")[0]);
-            dayCard.find(".card-body").attr("src",`https://openweathermap.org/img/wn/${currentDay.weather[0].icon}@4x.png`);
+            dayCard.children().eq(0).text(`Day ${5-i}`);
+            dayCard.children().eq(1).text("Temperature: " + (Math.round(dayData["main"]["temp"]-273.15)*100)/100 + "°C");
+            dayCard.children().eq(2).attr("src",`https://openweathermap.org/img/wn/${dayData.weather[0].icon}@2x.png`);
             
+            weatherDiv.prepend(dayCard);
+
         }
     })
+}
+
+function round2(num){
+    return Math.round(num*100)/100
 }
