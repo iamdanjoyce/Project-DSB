@@ -32,21 +32,21 @@
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="/Assets/images/Header image -Maroon Bells.jpg" class="d-block w-100" alt="grand-canyon">
+                    <img src="./Assets/images/Header-image-Maroon-Bells.jpg" class="d-block w-100" alt="grand-canyon">
                     <div class="carousel-caption d-none d-md-block text-center">
                         <h1 class="slide1">Explore <br> The land <br>Around You</h1>
                         <p>Explore the beauty of the Grand Canyon</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="./Assets/images/Header image -New york.jpg" class="d-block w-100" alt="hollywood">
+                    <img src="./Assets/images/Header-image-New-york.jpg" class="d-block w-100" alt="hollywood">
                     <div class="carousel-caption d-none d-md-block text-center">
                         <h1 class="slide2">Explore <br> The land <br>Around You</h1>
                         
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="/Assets/images/Header images - Colorado Skiing.jpg" class="d-block w-100" alt="new-york">
+                    <img src="./Assets/images/Header-images-Colorado-Skiing.jpg" class="d-block w-100" alt="new-york">
                     <div class="carousel-caption d-none d-md-block text-center">
                         <h1 class="slide3">Explore <br> The land <br>Around You</h1>
                         <p>Discover the iconic sights of New York</p>
@@ -107,9 +107,9 @@
             </div>
         </div>
     </div>
-</div>
+
     <!-- Weather -->
-    <div class="container">
+    <div class="container" id="weatherInfo">
       <div class="weather-forecast">
           <h2>5-Day Weather Forecast</h2>
           <div class="row">
@@ -120,7 +120,31 @@
                       <p>Weather: Sunny</p>
                   </div>
               </div>
-    <!-- Card -->
+             </div>
+    <!--map -->
+    <div id="map"></div>
+    <!-- modal -->
+    <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <!-- Modal title changed to Notification -->
+              <h5 class="modal-title" id="exampleModalLabel">Notification</h5>
+              <!-- Close button -->
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+              <!-- Text can be inserted here -->
+            </div>
+            <!-- No footer section -->
+          </div>
+        </div>
+      </div>
+    </div>
+              <!-- Card -->
     <section class="container">
         <div class="grid1"></div>
         <div class="grid2"></div>
