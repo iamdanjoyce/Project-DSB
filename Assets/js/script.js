@@ -17,7 +17,7 @@ form.on('submit', function (event) {
     event.preventDefault();
     var inputs = $(this).serializeArray();
     fetchLocations(inputs[0].value,inputs[1].value);
-
+    map.scrollIntoView();
 });
 //
 function fetchLocations(originName,destName){

@@ -105,6 +105,9 @@ header .carousel {
     border-radius: 10px;
 }
 
+#map{
+    height:500px;
+}
 
 
 /* Weather box styles */
@@ -115,10 +118,15 @@ header .carousel {
     width: 200px;
     text-align: center;
     display: inline-block;
+    background-color:rgb(210, 201, 188);
 }
 .weather-box p {
     color: #151515;
     margin: 0;
+}
+
+.weather-box:hover{
+    transform: rotate(10deg);
 }
 
 footer {

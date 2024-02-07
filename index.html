@@ -71,10 +71,10 @@
     <div class="card text-center bg-transparent border-0">
     <div class="card-body border-0">
         <!-- <h3 class="card-title"></h3> -->
-        <h3 class="card-text border-0">From California, to the New York Island. From the Redwood Forest, to the Gulf stream waters... <br>
+        <h4 class="card-text border-0">From California, to the New York Island. From the Redwood Forest, to the Gulf stream waters... <br>
         From Yellowstone park to the Las Vegas roulette table. From Disneyland to the forests of Oregon...<br>
         Set your imagination free. Plan your own American dream journey<br>
-        Roam USA and wherever you are from have a nice day now...</h3>
+        Roam USA and wherever you are from have a nice day now...</h4>
     </div>
     </div>
     <!-- form -->
@@ -89,17 +89,16 @@
                     <label for="destField">Destination:</label>
                     <input type="text" class="form-control" id="destField" name="destField" required>
                 </div>
-                <button type="submit" class="btn btn-primary w-100 mt-2">Submit</button>
+                <button type="submit" class="btn btn-primary w-100 mt-2" href="#weatherInfo">Submit</button>
             </form>
         </div>
     </div>
     <!-- Info Div -->
     <div class="container">
         <div id="info" class="weather-forecast row">
-            <!-- Heading with id="route" -->
-            <h2 id="route" class="col-6 text-center">Route Information</h2>
-            <!-- Text with id="routeLength" -->
-            <div class="row col-6 text-start">
+
+            <div class="col-6 text-center d-flex flex-column m-auto">
+                <h2 id="route" class="">Route Information</h2>
                 <div class="text-dark">
                     <p id="routeLength" class="text-dark">Route Length: <span id="lengthValue">---</span></p>
                 </div>
@@ -108,15 +107,18 @@
                     <p id="routeTime" class="text-dark">Route Time: <span id="timeValue">---</span></p>
                 </div>
             </div>
+            <div id="map" class="col-6"></div>
+
         </div>
       </div>
     <!-- Weather -->
     <div class="container">
         <div class="weather-forecast">
-            <h2 class="text-center">5-Day Weather Forecast</h2>
-            <div class="row">
-                <div class="d-flex justify-content-around" id="weatherInfo">
+            <h2 class="text-center overflow-visible">5-Day Weather Forecast</h2>
+            <div class="row overflow-visible">
+                <div class="d-flex justify-content-around overflow-visible mb-2" id="weatherInfo">
                     <!-- Place for 5 cards created in JS -->
+                    <p class="text-danger text-">Enter destination</p>
                 </div>
               </div>
         </div>
@@ -127,8 +129,7 @@
         <p>Temperature: XX°C</p>
         <image></image>
     </div>
-    <!--map -->
-    <div id="map"></div>
+
     <!-- modal -->
     <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
