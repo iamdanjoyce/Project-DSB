@@ -118,14 +118,17 @@ header .carousel {
     text-align: center;
     display: inline-block;
     background-color:rgb(210, 201, 188);
+    transition: 0.25s ease-in-out;
 }
 .weather-box p {
     color: #151515;
     margin: 0;
+    
 }
 
 .weather-box:hover{
     transform: rotate(10deg);
+    transition: 0.25s ease-in-out;
 }
 
 footer {

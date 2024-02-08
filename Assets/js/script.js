@@ -5,22 +5,28 @@ const infoBoard = $('#info');
 const modalE = $("#errorModal");
 const lengthVal = $("#lengthValue");
 const timeVal = $("#timeValue");
+const routeName = $('#routeName');
 const weatherDiv = $("#weatherInfo");
+const forecastDest = $("#forecastDest");
 const weatherTemplate = $("#weatherTemplate");
+const searchedButtons = $("#searchedButtons");
 var routeMap = tt.map({
     key: API,
     container: 'map'
 });
 
+$(document).ready(function(){
+    renderPreviousSearches();
+})
 
 form.on('submit', function (event) {
     event.preventDefault();
     var inputs = $(this).serializeArray();
-    fetchLocations(inputs[0].value,inputs[1].value);
+    fetchLocations(inputs[0].value,inputs[1].value,false);
     map.scrollIntoView();
 });
 //
-function fetchLocations(originName,destName){
+function fetchLocations(originName,destName,fromButton){
     //Request origin coordinates
     var originURL = `https://api.tomtom.com/search/2/geocode/${originName}.json?key=${API}&countrySet=US&limit=1`;
     var f1 = fetch(originURL).then((response)=>{return response.json()})
@@ -56,6 +62,9 @@ function fetchLocations(originName,destName){
         }
         render_route([or.lat,or.lon],[des.lat,des.lon]);
         renderWeather(des.lat,des.lon);
+        if(!fromButton) addToStorage(or.name+"/"+des.name);
+        routeName.text(or.name+" → "+des.name);
+        forecastDest.text(des.name)
     }).catch((e)=>{
         showModal(e);
     });
@@ -121,4 +130,32 @@ function renderWeather(lat,lon){
 
 function round2(num){
     return Math.round(num*100)/100
+}
+
+function renderPreviousSearches(){
+    var searches = JSON.parse(localStorage.getItem("lastSearches"));
+    searchedButtons.empty();
+    if(searches != null){
+        for (const t of searches) {
+            var btn = $("<button>"); 
+            btn.text(t);
+            btn.on("click",function(){
+                var locations = t.split("/");
+                fetchLocations(locations[0],locations[1],true);
+            });
+            btn.addClass("btn btn-info");
+            searchedButtons.append(btn);
+        }
+        
+        
+    }
+}
+
+function addToStorage(text){
+    var searches = JSON.parse(localStorage.getItem("lastSearches"));
+    if(searches == null) searches = [];
+    searches.unshift(text);
+    if(searches.length > 4) searches.pop();
+    localStorage.setItem("lastSearches", JSON.stringify(searches));
+    renderPreviousSearches();
 }

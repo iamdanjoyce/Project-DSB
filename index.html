@@ -26,6 +26,15 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
+                    <li>
+                        <a class="nav-link active" aria-current="page" href="#form">Route planner</a>
+                    </li>
+                    <li>
+                        <a class="nav-link active" aria-current="page" href="#info">Weather</a>
+                    </li>
+                    <li>
+                        <a class="nav-link active" aria-current="page" href="#features">Features</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -90,30 +99,36 @@
                 </div>
                 <button type="submit" class="btn btn-primary w-100 mt-2" href="#weatherInfo">Submit</button>
             </form>
+            
+            
         </div>
+        
+    </div>
+    <div>
+        <h5 class="fw-light text-center my-3">Previous four searches</h5>
+        <section id="searchedButtons" class="d-flex justify-content-center gap-3">
+        </section>
     </div>
     <!-- Info Div -->
     <div class="container">
         <div id="info" class="weather-forecast row">
 
             <div class="col-6 text-center d-flex flex-column m-auto">
-                <h2 id="route" class="">Route Information</h2>
+                <h3 id="route" class="">Route Information</h3>
                 <div class="text-dark">
+                    <p id="routeName" class="text-dark fs-3 fw-bold">... &#8594; ...</p>
                     <p id="routeLength" class="text-dark">Route Length: <span id="lengthValue">---</span></p>
-                </div>
-                <div class="">
-                    <!-- Text with id="routeTime" -->
                     <p id="routeTime" class="text-dark">Route Time: <span id="timeValue">---</span></p>
                 </div>
             </div>
             <div id="map" class="col-6"></div>
 
         </div>
-      </div>
+    </div>
     <!-- Weather -->
     <div class="container">
         <div class="weather-forecast">
-            <h2 class="text-center overflow-visible">5-Day Weather Forecast</h2>
+            <h2 class="text-center overflow-visible">5-Day Weather Forecast at <span id="forecastDest" class="text-decoration-underline">...</span></h2>
             <div class="row overflow-visible">
                 <div class="d-flex justify-content-around overflow-visible mb-2" id="weatherInfo">
                     <!-- Place for 5 cards created in JS -->
@@ -151,7 +166,7 @@
       </div>
     </div>
               <!-- Card -->
-    <section class="container">
+    <section class="container" id="features">
         <div class="grid1">
             <div class="text-container">
                 <h3>State-to-State Discovery</h3>
