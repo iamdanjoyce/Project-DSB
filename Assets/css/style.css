@@ -39,6 +39,43 @@ h3 {
     color: white;
 }
 
+
+.navbar-link {
+    color: #151515;
+    align-items: right;
+}
+
+#card {
+    height: 480px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+/* Header styling */
+header {
+    border-radius: 16px;
+}
+
+header .carousel {
+    display: grid;
+    max-width: 1280px;
+    margin: auto;
+    border-radius: 16px;
+}
+
+#carouselExampleAutoplaying {
+    max-width: 1280px;
+    margin: auto;
+    border-radius: 16px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
 header .slide1 {
     font-family: 'Heebo', sans-serif;
     color: #ffffff;
@@ -66,41 +103,6 @@ header .slide3 {
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-.navbar-link {
-    color: #151515;
-    align-items: right;
-}
-
-#card {
-    height: 480px;
-    margin: auto;
-    border-radius: 10px;
-}
-
-
-header {
-    border-radius: 16px;
-}
-
-header .carousel {
-    display: grid;
-    max-width: 1280px;
-    margin: auto;
-    border-radius: 16px;
-}
-
-#carouselExampleAutoplaying {
-    max-width: 1280px;
-    margin: auto;
-    border-radius: 16px;
-}
-
-.carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
 
 #map{
     height:500px;
@@ -129,16 +131,8 @@ header .carousel {
     transition: 0.25s ease-in-out;
 }
 
-footer {
-    background-color: #f8f9fa;
-    padding: 10px 0;
-    text-align: center;
-}
 
-footer p {
-    color: #151515;
-}
-
+/* Style for grids section */
 .container {
     display: grid;
     margin: 16px auto;
@@ -150,13 +144,11 @@ footer p {
     overflow: hidden;
 }
 
-
 .container div {
     border-radius: 16px;
     position: relative;
     overflow: hidden;
 }
-
 
 .grid1 {
     grid-column: 1/3;
@@ -164,8 +156,6 @@ footer p {
     background: url(../images/Vegas-1.jpg) center center;
     background-size: cover;
 }
-
-
 
 
 .grid2 {
@@ -199,6 +189,41 @@ footer p {
     background-size: cover;
 }
 
+.grid1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Adjust the last value (alpha) to control darkness */
+    z-index: 0;
+}
+
+.grid2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Adjust the last value (alpha) to control darkness */
+    z-index: 0;
+}
+
+.grid3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value (alpha) to control darkness */
+    z-index: 0;
+}
+
+
+/* Style for text in grids */
 
 .text-container {
     position: relative;
@@ -206,8 +231,6 @@ footer p {
     z-index: 1; /* Ensure text appears above the background image */
 }
 
-
-/* Style for heading */
 .grid3 h3 {
     font-family: 'Heebo', sans-serif;
     color: #ffffff;
@@ -218,8 +241,6 @@ footer p {
     padding-left: 56px;
 }
 
-
-/* Style for paragraph */
 .grid3 p {
     font-size: 20px;
     line-height: 1.5;
@@ -289,42 +310,65 @@ footer p {
 }
 
 
-
-
 .button:hover::after {
     width: 100%; /* Shrinks the underline on hover */
 }
 
-
-.grid1::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); /* Adjust the last value (alpha) to control darkness */
-    z-index: 0;
+/* Footer styling */
+footer {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    text-align: center;
 }
 
-.grid2::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); /* Adjust the last value (alpha) to control darkness */
-    z-index: 0;
+footer p {
+    color: #151515;
 }
 
-.grid3::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value (alpha) to control darkness */
-    z-index: 0;
+/* For screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+    #features {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        grid-auto-rows: minmax(100px, auto);
+    }
+    .grid1,
+    .grid2,
+    .grid3,
+    .grid4,
+    .grid5 {
+        grid-column: 100%;
+        grid-row: 100%;
+    }
+
+    .weather-box {
+        width: 100%;
+    }
+    
+    h2{
+        font-size: 40px!important;
+    }
+    section *{
+        min-width: 300px;
+        align-self: center;
+    }
+}
+
+/* For screens between 769px and 1024px */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    #features {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        grid-auto-rows: minmax(100px, auto);
+    }
+    .grid1,
+    .grid2,
+    .grid3,
+    .grid4,
+    .grid5 {
+        grid-column: 100%;
+        grid-row: 100%;
+    }
+
+    h2{
+        font-size: 40px!important;
+    }
 }
