@@ -4,34 +4,55 @@ Roam USA is a Travel Planner developed with HTML, CSS, Bootstrap5 components and
 
 ## Roam USA
 
-Roam USA is the name of the site. The function of the website will allow the end user to plan a route across America. It will also show what kind of weather to expect at their destination.
+Roam USA is the name of the website. The function of the site will allow the end user to plan a route or multiple routes across North America. It will also show what kind of weather the user can expect at their destination.
 
 ## Collaborators
 
-This project was created by Dan Joyce (Team Leader) Raymond Chibvongodze, Roberts Feldmanis and Vicky Cowell. 
+This project was created by:
+* Dan Joyce (Team Leader) 
+* Raymond Chibvongodze
+* Roberts Feldmanis 
+* Vicky Cowell
 
 ## User story
 ```md
-The user wants a website that will show them how long it will take to travel across America. They also want to be able to see what the weather will be like on those days of travelling.
+The user wants a website that will show them how long it will take to travel between locations within North America. They also want to be able to see what the weather will be like at their destination.
 ```
 
 ## Layout of Project
 
-Below is the wireframe Raymond created of the basic layout of the site and how we agreed as a team that we want it to look.
+Below is the wireframe Raymond created of the basic layout of the site and how we agreed as a team that we want it to look. Although some changes were required we used this as a foundation. 
 
-![wire-frame](Assets/images/Home_-_wireframe.jpg)
+![alt text](image-3.png)
 
-## APIs used
+## Design
+We wanted an on-trend, simple and functional Apple-style, bento-box design with an earthy, peachy-red/orange colour scheme to echo the colours of the North American landscape -its canyons and mountains. 
 
-Google fonts API with Heebo text
-TomTom maps API
-Openweather API
+## APIs used:
 
-## Screenshots 
+* Google fonts API with Heebo text
+* TomTom maps API -displays route in map and provides the distance and time it takes to travel 
+* Openweather API -to provide 5 day forecast for destination
+
+## Screenshots
+
+![alt text](image.png)
+
+![alt text](image-1.png)
+
+![alt text](image-2.png)
+
+## Gif video of Application working 
 Here is a video of the Application working with the search function.
 
 <video src="./Assets/images/Screen Recording Roam USA.mp4" controls="controls" style="max-width: 1200px;">
 </video>
+
+## Directions for future development:
+
+* To show points of interest, events or services along the chosen route
+* To show the weather along the route not only at the destination
+* To show hotels, hostels, b&Bs and accomodation along the route/ways to book 
 
 ## Links to Repo
 
