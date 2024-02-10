@@ -23,7 +23,7 @@ The user wants a website that will show them how long it will take to travel bet
 
 Below is the wireframe Raymond created of the basic layout of the site and how we agreed as a team that we want it to look. Although some changes were required we used this as a foundation. 
 
-![alt text](image-3.png)
+![alt text](./Assets/images/Screenshots/image-3.png)
 
 ## Design
 We wanted an on-trend, simple and functional Apple-style, bento-box design with an earthy, peachy-red/orange colour scheme to echo the colours of the North American landscape -its canyons and mountains. 
@@ -36,11 +36,11 @@ We wanted an on-trend, simple and functional Apple-style, bento-box design with 
 
 ## Screenshots
 
-![alt text](image.png)
+![alt text](./Assets/images/Screenshots/image.png)
 
-![alt text](image-1.png)
+![alt text](./Assets/images/Screenshots/image-1.png)
 
-![alt text](image-2.png)
+![alt text](./Assets/images/Screenshots/image-2.png)
 
 ## Gif video of Application working 
 Here is a video of the Application working with the search function.
