@@ -45,8 +45,9 @@ We wanted an on-trend, simple and functional Apple-style, bento-box design with 
 ## Gif video of Application working 
 Here is a video of the Application working with the search function.
 
-<video src="./Assets/images/Screen Recording Roam USA.mp4" controls="controls" style="max-width: 1200px;">
-</video>
+![alt text](./Assets/images/RoamUSA.gif)
+
+
 
 ## Directions for future development:
 
